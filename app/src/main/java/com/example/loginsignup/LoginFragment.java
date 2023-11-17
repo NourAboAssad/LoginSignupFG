@@ -90,13 +90,12 @@ public class LoginFragment extends Fragment {
 
             }
         });
-        tvForget.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoFFragment();
-
-            }
-        });
+       tvForget.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+               gotoFFragment();
+           }
+       });
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -128,7 +127,7 @@ public class LoginFragment extends Fragment {
     }
     private void gotoFFragment() {
         FragmentTransaction ft= getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.FrameLayoutMain,new SignupFragment());
+        ft.replace(R.id.FrameLayoutMain,new FFragment());
         ft.commit();
     }
 }
